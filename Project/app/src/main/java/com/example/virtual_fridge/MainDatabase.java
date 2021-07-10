@@ -6,12 +6,13 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {KitchenItem.class, ShoppingItem.class}, version = 1)
+@Database(entities = {KitchenItem.class, ShoppingItem.class}, version = 2)
 public abstract class MainDatabase extends RoomDatabase {
     public abstract KitchenItemDao kitchenItemDao();
 
@@ -22,14 +23,17 @@ public abstract class MainDatabase extends RoomDatabase {
     static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     // -- Below code used to migrate database to new version if changes are made to the schema
+
     /*
-    static final Migration MIGRATE_UP = new Migration(1, 2) {
+    static final Migration MIGRATE_1_2 = new Migration(1, 2) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
-            // Any changes to database goes here
+            database.execSQL("ALTER TABLE shopping_list_table ADD COLUMN checked INTEGER NOT NULL DEFAULT 0");
         }
     };
+
      */
+
 
     static MainDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
@@ -38,6 +42,7 @@ public abstract class MainDatabase extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             MainDatabase.class, "lists_database")
                             .addCallback(sRoomDatabaseCallback)
+                            // when migrating, add: .addMigrations(<migration method>)
                             .build();
                 }
             }

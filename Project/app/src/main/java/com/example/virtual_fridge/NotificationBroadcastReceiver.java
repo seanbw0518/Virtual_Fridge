@@ -52,32 +52,32 @@ public class NotificationBroadcastReceiver extends BroadcastReceiver {
             if (action != null) {
                 switch (action) {
                     case ("insertOneDay"):
-                        shoppingItemRepo.insert(new ShoppingItem(itemOneDay.getName(), -1, null, itemOneDay.getType()));
+                        shoppingItemRepo.insert(new ShoppingItem(itemOneDay.getName(), -1, null, itemOneDay.getType(), false));
                         notificationManager.cancel(notifyIdOneDay);
                         break;
                     case ("insertTwoDay"):
-                        shoppingItemRepo.insert(new ShoppingItem(itemTwoDay.getName(), -1, null, itemTwoDay.getType()));
+                        shoppingItemRepo.insert(new ShoppingItem(itemTwoDay.getName(), -1, null, itemTwoDay.getType(), false));
                         notificationManager.cancel(notifyIdTwoDay);
                         break;
                     case ("insertOneWeek"):
-                        shoppingItemRepo.insert(new ShoppingItem(itemOneWeek.getName(), -1, null, itemOneWeek.getType()));
+                        shoppingItemRepo.insert(new ShoppingItem(itemOneWeek.getName(), -1, null, itemOneWeek.getType(), false));
                         notificationManager.cancel(notifyIdOneWeek);
                         break;
                     case ("insertAllOneDay"):
                         for (KitchenItem item : itemsOneDay) {
-                            shoppingItemRepo.insert(new ShoppingItem(item.getName(), -1, null, item.getType()));
+                            shoppingItemRepo.insert(new ShoppingItem(item.getName(), -1, null, item.getType(), false));
                         }
                         notificationManager.cancel(notifyIdOneDay);
                         break;
                     case ("insertAllTwoDay"):
                         for (KitchenItem item : itemsTwoDay) {
-                            shoppingItemRepo.insert(new ShoppingItem(item.getName(), -1, null, item.getType()));
+                            shoppingItemRepo.insert(new ShoppingItem(item.getName(), -1, null, item.getType(), false));
                         }
                         notificationManager.cancel(notifyIdTwoDay);
                         break;
                     case ("insertAllOneWeek"):
                         for (KitchenItem item : itemsOneWeek) {
-                            shoppingItemRepo.insert(new ShoppingItem(item.getName(), -1, null, item.getType()));
+                            shoppingItemRepo.insert(new ShoppingItem(item.getName(), -1, null, item.getType(), false));
                         }
                         notificationManager.cancel(notifyIdOneWeek);
                         break;

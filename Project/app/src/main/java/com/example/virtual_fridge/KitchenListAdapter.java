@@ -422,7 +422,7 @@ public class KitchenListAdapter extends RecyclerView.Adapter<KitchenListAdapter.
                         int position = getLayoutPosition();
                         KitchenItem item = kitchenItems.get(position);
 
-                        ShoppingItem newShoppingItem = new ShoppingItem(item.getName(), -1, null, item.getType());
+                        ShoppingItem newShoppingItem = new ShoppingItem(item.getName(), -1, null, item.getType(), false);
                         shoppingItemViewModel.insert(newShoppingItem);
                         viewModel.delete(item);
 

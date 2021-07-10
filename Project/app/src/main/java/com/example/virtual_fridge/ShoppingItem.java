@@ -22,6 +22,8 @@ public class ShoppingItem implements Parcelable {
     public String unit;
     public String type;
 
+    public boolean checked;
+
     // unused constructor
     @Ignore
     public ShoppingItem(@NonNull String name) {
@@ -29,11 +31,12 @@ public class ShoppingItem implements Parcelable {
     }
 
     // used constructor
-    public ShoppingItem(@NonNull String name, float quantity, String unit, String type) {
+    public ShoppingItem(@NonNull String name, float quantity, String unit, String type, boolean checked) {
         this.name = name;
         this.quantity = quantity;
         this.unit = unit;
         this.type = type;
+        this.checked = checked;
     }
 
     // Getters
@@ -58,6 +61,10 @@ public class ShoppingItem implements Parcelable {
         return type;
     }
 
+    public boolean isChecked() {
+        return checked;
+    }
+
     // Setters
     public void setQuantity(float quantity) {
         this.quantity = quantity;
@@ -79,6 +86,10 @@ public class ShoppingItem implements Parcelable {
         this.type = type;
     }
 
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
+
     // Parcelable implementation methods
     @Override
     public int describeContents() {
@@ -92,6 +103,7 @@ public class ShoppingItem implements Parcelable {
         dest.writeFloat(quantity);
         dest.writeString(unit);
         dest.writeString(type);
+        dest.writeBoolean(checked);
     }
 
     protected ShoppingItem(Parcel in) {
@@ -100,6 +112,7 @@ public class ShoppingItem implements Parcelable {
         quantity = in.readFloat();
         unit = in.readString();
         type = in.readString();
+        checked = in.readBoolean();
     }
 
     public static final Creator<ShoppingItem> CREATOR = new Creator<ShoppingItem>() {

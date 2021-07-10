@@ -225,7 +225,7 @@ public class AddShoppingItemFormFragment extends Fragment implements View.OnClic
                     shoppingItemViewModel.update(item);
 
                 } else if (mode.equals("insert")) {
-                    item = new ShoppingItem(itemName, itemQuantity, itemUnit, itemType);
+                    item = new ShoppingItem(itemName, itemQuantity, itemUnit, itemType, false);
                     shoppingItemViewModel.insert(item);
                 }
 

@@ -11,7 +11,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -136,6 +135,9 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
                 holder.shoppingItemType.setText(current.getType());
                 holder.shoppingItemType.setVisibility(View.VISIBLE);
             }
+
+            // Checkbox
+            holder.shoppingItemCheckbox.setChecked(current.isChecked());
 
         }
     }
@@ -263,12 +265,14 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
         private final TextView shoppingItemName;
         private final TextView shoppingItemType;
         private final ImageView shoppingItemIcon;
+        private final MaterialCheckBox shoppingItemCheckbox;
 
         private ShoppingItemHolder(View itemView) {
             super(itemView);
             shoppingItemName = itemView.findViewById(R.id.shopping_item_name);
             shoppingItemType = itemView.findViewById(R.id.shopping_item_type);
             shoppingItemIcon = itemView.findViewById(R.id.shopping_item_icon);
+            shoppingItemCheckbox = itemView.findViewById(R.id.shopping_item_check);
 
             // on click -> show details
             itemView.setOnClickListener(v -> {
@@ -283,17 +287,25 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
                 shoppingItemDetailsBottomSheet.show(activity.getSupportFragmentManager(), "sheet");
             });
 
-            MaterialCheckBox checkBox = itemView.findViewById(R.id.shopping_item_check);
-            checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+
+            shoppingItemCheckbox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                ShoppingItem item = shoppingItems.get(getLayoutPosition());
+
                 if (isChecked) {
                     itemView.setBackgroundColor(itemView.getContext().getColor(R.color.selected_item));
+                    item.setChecked(true);
+
                 } else {
                     // -- Code used with thanks from Amit Vaghela at https://stackoverflow.com/questions/37987732/programmatically-set-selectableitembackground-on-android-view
                     TypedValue outValue = new TypedValue();
                     itemView.getContext().getTheme().resolveAttribute(android.R.attr.selectableItemBackground, outValue, true);
                     itemView.setBackgroundResource(outValue.resourceId);
                     // --
+
+                    item.setChecked(false);
                 }
+                viewModel.update(item);
+
             });
         }
     }

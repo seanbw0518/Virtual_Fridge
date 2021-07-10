@@ -132,7 +132,7 @@ public class KitchenListDetailsBottomSheet extends BottomSheetDialogFragment {
         addToShoppingButton.setOnClickListener(v -> {
             ShoppingItemViewModel shoppingItemViewModel = new ViewModelProvider(requireActivity()).get(ShoppingItemViewModel.class);
 
-            ShoppingItem newShoppingItem = new ShoppingItem(item.getName(), -1, null, item.getType());
+            ShoppingItem newShoppingItem = new ShoppingItem(item.getName(), -1, null, item.getType(), false);
 
             shoppingItemViewModel.insert(newShoppingItem);
             // close bottom sheet
