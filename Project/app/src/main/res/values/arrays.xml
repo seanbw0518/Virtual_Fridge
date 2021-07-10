@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Units (Metric/Imperial, Generic/Specific, Full/Abbreviated) -->
+    <string-array name="units_generic">
+        <item>Bags</item>
+        <item>Boxes</item>
+        <item>Bunches</item>
+        <item>Sets</item>
+        <item>Packs</item>
+        <item>Slices</item>
+        <item>Cans</item>
+        <item>Bottles</item>
+        <item>Loaves</item>
+    </string-array>
+
+    <string-array name="units_array_metric">
+        <item>Kilograms</item>
+        <item>Grams</item>
+        <item>Litres</item>
+        <item>Centilitres</item>
+        <item>Millilitres</item>
+        <item>Bags</item>
+        <item>Boxes</item>
+        <item>Bunches</item>
+        <item>Sets</item>
+        <item>Packs</item>
+        <item>Slices</item>
+        <item>Cans</item>
+        <item>Bottles</item>
+        <item>Loaves</item>
+    </string-array>
+
+    <string-array name="units_array_metric_abbrev">
+        <item>kg</item>
+        <item>g</item>
+        <item>l</item>
+        <item>cl</item>
+        <item>ml</item>
+        <item>Bags</item>
+        <item>Boxes</item>
+        <item>Bunches</item>
+        <item>Sets</item>
+        <item>Packs</item>
+        <item>Slices</item>
+        <item>Cans</item>
+        <item>Bottles</item>
+        <item>Loaves</item>
+    </string-array>
+
+    <string-array name="units_array_imperial">
+        <item>Pounds</item>
+        <item>Ounces</item>
+        <item>Gallons</item>
+        <item>Cups</item>
+        <item>Fluid Ounces</item>
+        <item>Bags</item>
+        <item>Boxes</item>
+        <item>Bunches</item>
+        <item>Sets</item>
+        <item>Packs</item>
+        <item>Slices</item>
+        <item>Cans</item>
+        <item>Bottles</item>
+    </string-array>
+
+    <string-array name="units_array_imperial_abbrev">
+        <item>lbs</item>
+        <item>oz</item>
+        <item>gal</item>
+        <item>c</item>
+        <item>fl.oz</item>
+        <item>Bags</item>
+        <item>Boxes</item>
+        <item>Bunches</item>
+        <item>Sets</item>
+        <item>Packs</item>
+        <item>Slices</item>
+        <item>Cans</item>
+        <item>Bottles</item>
+        <item>Loaves</item>
+    </string-array>
+
+    <!-- Item Types -->
+    <string-array name="item_types">
+        <item>Alcoholic Drinks</item>
+        <item>Dairy</item>
+        <item>Baking Ingredients</item>
+        <item>Canned Goods</item>
+        <item>Bakery</item>
+        <item>Cold Drinks</item>
+        <item>Desserts</item>
+        <item>Fruits</item>
+        <item>Herbs/Spices</item>
+        <item>Hot Drinks</item>
+        <item>Meals</item>
+        <item>Meat</item>
+        <item>Nuts</item>
+        <item>Sauces/Spreads</item>
+        <item>Seafood</item>
+        <item>Snacks</item>
+        <item>Vegetables</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Icons -->
+    <string-array name="icon_filenames_for_name">
+        <item>apple_apples</item>
+        <item>apricot_apricots</item>
+        <item>asparagus_asparagus</item>
+        <item>avocado_avocados</item>
+        <item>bacon</item>
+        <item>bagel_bagels</item>
+        <item>banana_bananas</item>
+        <item>bean_beans</item>
+        <item>beet_beets_beetroot_beetroots</item>
+        <item>black_pepper_peppercorn_peppercorns</item>
+        <item>blueberry_blueberries</item>
+        <item>brazil_nut_nuts</item>
+        <item>bread_baguette_breads_baguettes</item>
+        <item>broccoli</item>
+        <item>butter_margarine</item>
+        <item>cabbage_iceberg_lettuce_cabbages_lettuces</item>
+        <item>cake_cakes</item>
+        <item>can_canned_cans</item>
+        <item>cashew_cashews</item>
+        <item>caviar_roe</item>
+        <item>celery</item>
+        <item>cereal_cereals_granola</item>
+        <item>cheese_cheeses_gouda_edam_swiss_emmenthal_emmental_mozzarella_cheddar</item>
+        <item>cherry_cherries</item>
+        <item>chia_seeds_seed</item>
+        <item>chocolate_chocolates</item>
+        <item>chocolate_spread_nutella</item>
+        <item>cinnamon</item>
+        <item>coconut_coconuts</item>
+        <item>coconut_milk</item>
+        <item>coffee_hot_chocolate</item>
+        <item>cookie_cookies_biscuit_biscuits</item>
+        <item>corn_sweetcorn</item>
+        <item>crab_crabs</item>
+        <item>croissant_croissants</item>
+        <item>cucumber_cucumbers</item>
+        <item>cupcake_cupcakes</item>
+        <item>curry_powder_spice_ground</item>
+        <item>date_dates</item>
+        <item>doughnut_doughnuts_donuts_donut</item>
+        <item>egg_eggs</item>
+        <item>eggplant_eggplants_aubergine_aubergines</item>
+        <item>fish_fishes_cod_salmon_cods_slamons_tuna_tunas_mackerel_mackerels_sardine_sardines</item>
+        <item>flax_seeds_seed_sesame</item>
+        <item>flour</item>
+        <item>fries</item>
+        <item>garlic_garlics</item>
+        <item>ginger_gingers</item>
+        <item>grape_grapes</item>
+        <item>tea</item>
+        <item>gyoza_dumpling_dumplings_gyozas</item>
+        <item>hamburger_burger_burgers_hamburgers</item>
+        <item>hazelnut_hazelnuts</item>
+        <item>honey</item>
+        <item>hot_dog_dogs</item>
+        <item>ice_cream_creams_gelato</item>
+        <item>jam</item>
+        <item>jelly_jello_jell_o_jello</item>
+        <item>juice_juices</item>
+        <item>ketchup</item>
+        <item>kiwi_kiwis</item>
+        <item>lamb_lambs</item>
+        <item>lasagna</item>
+        <item>leek_leeks</item>
+        <item>leftover_leftovers_takeaway_takeout</item>
+        <item>lemon_lemons</item>
+        <item>lentil_lentils</item>
+        <item>lettuce_lettuces_romaine</item>
+        <item>lime_limes</item>
+        <item>mango_mangoes</item>
+        <item>maple_syrup</item>
+        <item>melon_melons_cantaloupe_cantaloupes_honeydew_honeydews</item>
+        <item>mango_mangoes</item>
+        <item>milk</item>
+        <item>mushroom_mushrooms</item>
+        <item>nachos_doritos</item>
+        <item>noodles_noodle_ramen</item>
+        <item>oat_milk</item>
+        <item>oat_oats</item>
+        <item>oil_sunflower_vegetable_oils_rapeseed_canola</item>
+        <item>olive_oil_oils</item>
+        <item>onion_onions</item>
+        <item>orange_oranges_clementine_clementines_tangerines_tangerine_satsuma_satsumas</item>
+        <item>pancake_pancakes</item>
+        <item>paprika</item>
+        <item>peach_peaches</item>
+        <item>peanut_butter</item>
+        <item>pear_pears</item>
+        <item>peas_pea</item>
+        <item>pecan_pecans</item>
+        <item>pie_pies</item>
+        <item>pizza_pizzas</item>
+        <item>plum_plums</item>
+        <item>pomegranate_pomegranates</item>
+        <item>popcorn</item>
+        <item>potato_chips_crisps</item>
+        <item>potato_potatoes</item>
+        <item>prawn_prawns_shrimp_shrimps</item>
+        <item>pumpkin_pumpkins</item>
+        <item>radish_radishes</item>
+        <item>raisin_raisins</item>
+        <item>raspberry_raspberries</item>
+        <item>rice_rices</item>
+        <item>salad_salads</item>
+        <item>salami_salamis</item>
+        <item>salt</item>
+        <item>samosa_samosas</item>
+        <item>sandwich_sandwiches</item>
+        <item>sauce_gravy_sauces</item>
+        <item>sausage_sausages</item>
+        <item>shellfish_clams_clam</item>
+        <item>soup_soups_broth_stew_stews</item>
+        <item>soy_sauce</item>
+        <item>spaghetti_pasta</item>
+        <item>spices_spice</item>
+        <item>spinach</item>
+        <item>squash_squashes</item>
+        <item>steak_steaks_meat_beef_pork</item>
+        <item>sugar</item>
+        <item>sushi</item>
+        <item>sweet_potato_potatoes</item>
+        <item>sweets_sweet_candy_candies</item>
+        <item>taco_tacos</item>
+        <item>thyme_herb_herbs_rosemary</item>
+        <item>tofu</item>
+        <item>tomato_tomatoes</item>
+        <item>turkey_turkeys_chicken_chickens</item>
+        <item>vinegar</item>
+        <item>watermelon_water_melon_watermelons</item>
+        <item>wine</item>
+        <item>wrap_wraps_tortilla_tortillas</item>
+        <item>yogurt_yoghurt</item>
+        <item>zucchini_zucchinis_courgettes_courgette</item>
+    </string-array>
+
+</resources>

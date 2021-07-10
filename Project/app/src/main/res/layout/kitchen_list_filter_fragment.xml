@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- TOOLBAR -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/kitchen_filters_toolbar"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/toolbar_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_title"
+            android:textColor="@color/text"
+            android:textSize="@dimen/text_large" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- TYPE -->
+            <TextView
+                android:id="@+id/kitchen_filters_type_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:text="@string/type_in"
+                android:textColor="@color/textInverse"
+                android:textSize="@dimen/text_huge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/kitchen_filters_type"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/big_padding"
+                app:chipSpacing="@dimen/small_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kitchen_filters_type_heading">
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <View
+                android:id="@+id/div_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/big_padding"
+                android:background="@color/divider"
+                app:layout_constraintTop_toBottomOf="@+id/kitchen_filters_type" />
+
+            <!-- LOCATION -->
+            <TextView
+                android:id="@+id/kitchen_filters_location_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:text="@string/location_heading"
+                android:textColor="@color/textInverse"
+                android:textSize="@dimen/text_huge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_1" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/kitchen_filters_location"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/big_padding"
+                app:chipSpacing="@dimen/small_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kitchen_filters_location_heading">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/location_chip_fridge"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/loc_fridge"
+                    app:checkedIcon="@drawable/check_icon"
+                    app:checkedIconVisible="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/location_chip_freezer"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/loc_freezer"
+                    app:checkedIcon="@drawable/check_icon"
+                    app:checkedIconVisible="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/location_chip_pantry"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/loc_pantry"
+                    app:checkedIcon="@drawable/check_icon"
+                    app:checkedIconVisible="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/location_chip_other"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/loc_other"
+                    app:checkedIcon="@drawable/check_icon"
+                    app:checkedIconVisible="true" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <View
+                android:id="@+id/div_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/big_padding"
+                android:background="@color/divider"
+                app:layout_constraintTop_toBottomOf="@+id/kitchen_filters_location" />
+
+            <!-- EXPIRY DATE -->
+            <TextView
+                android:id="@+id/kitchen_filters_expiry_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:text="@string/expiry_filter"
+                android:textColor="@color/textInverse"
+                android:textSize="@dimen/text_huge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_2" />
+
+            <SeekBar
+                android:id="@+id/expiry_slider"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/big_padding"
+                android:layout_marginVertical="40dp"
+                android:max="31"
+                android:progress="31"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kitchen_filters_expiry_heading" />
+
+            <TextView
+                android:id="@+id/expiry_filter_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:textColor="@color/textInverse"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/expiry_slider" />
+
+            <!-- APPLY -->
+            <Button
+                android:id="@+id/kitchen_filters_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/big_padding"
+                android:layout_marginTop="@dimen/big_padding"
+                android:text="@string/button_apply"
+                app:layout_constraintTop_toBottomOf="@id/expiry_filter_indicator" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_nav_height_with_big_margin"
+                app:layout_constraintTop_toBottomOf="@id/kitchen_filters_save" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

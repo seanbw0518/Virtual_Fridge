@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="big_padding">16dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="tiny_padding">4dp</dimen>
+
+    <!-- Dimensions -->
+    <dimen name="min_height">20dp</dimen>
+    <dimen name="toolbar_height">55dp</dimen>
+    <dimen name="bottom_nav_height">80dp</dimen>
+    <dimen name="bottom_nav_height_with_small_margin">96dp</dimen>
+    <dimen name="recycler_view_bottom_margin">136dp</dimen>
+    <dimen name="bottom_nav_height_with_big_margin">150dp</dimen>
+    <dimen name="icon_width">50dp</dimen>
+    <dimen name="item_text_line_2_size">14sp</dimen>
+    <dimen name="fab_diameter">55dp</dimen>
+    <dimen name="small_fab_diameter">45dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_tiny">14sp</dimen>
+    <dimen name="text_small">18sp</dimen>
+    <dimen name="text_medium">20sp</dimen>
+    <dimen name="text_large">22sp</dimen>
+    <dimen name="text_huge">24sp</dimen>
+
+</resources>

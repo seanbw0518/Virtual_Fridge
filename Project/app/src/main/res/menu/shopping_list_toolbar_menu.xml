@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/shopping_list_filter"
+        android:icon="@drawable/filter_icon"
+        android:title="@string/filter_title"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/shopping_list_sort"
+        android:icon="@drawable/sort_icon"
+        android:title="@string/sort_title"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/shopping_list_order"
+        android:icon="@drawable/order_icon"
+        android:title="@string/order_title"
+        app:showAsAction="ifRoom" />
+</menu>

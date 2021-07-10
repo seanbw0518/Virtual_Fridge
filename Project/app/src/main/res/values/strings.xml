@@ -1,0 +1,147 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Virtual Fridge</string>
+
+    <!-- Notification Info -->
+    <string name="notif_channel_name">Expiry Notifications</string>
+    <string name="notif_channel_desc">Alerts when food is near expiration.</string>
+
+    <!-- Shared Settings -->
+    <string name="one_day_notifs_active">oneDayNotifsActive</string>
+    <string name="one_day_notifs_active_def">true</string>
+    <string name="two_day_notifs_active">twoDayNotifsActive</string>
+    <string name="two_day_notifs_active_def">true</string>
+    <string name="one_week_notifs_active">oneWeekNotifsActive</string>
+    <string name="one_week_notifs_active_def">true</string>
+
+    <string name="notif_hour">notifHour</string>
+    <string name="notif_hour_def">10</string>
+    <string name="notif_minute">notifMinute</string>
+    <string name="notif_minute_def">0</string>
+
+    <string name="unit_is_imperial">unitIsImperial</string>
+    <string name="unit_is_imperial_def">false</string>
+
+    <string name="kitchen_welcome_seen">kitchenWelcomeSeen</string>
+    <string name="kitchen_welcome_seen_def">kitchenWelcomeSeen</string>
+
+    <string name="shopping_welcome_seen">shoppingWelcomeSeen</string>
+    <string name="shopping_welcome_seen_def">false</string>
+
+    <string name="obj_detect_welcome_seen">objDetectWelcomeSeen</string>
+    <string name="obj_detect_welcome_seen_def">false</string>
+
+    <string name="barcode_welcome_seen">barcodeWelcomeSeen</string>
+    <string name="barcode_welcome_seen_def">false</string>
+
+    <!-- Titles -->
+    <string name="main_page_title">Inventory</string>
+    <string name="shopping_page_title">Shopping List</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="filter_title">Filter Items</string>
+    <string name="sort_title">Sort Items</string>
+    <string name="search_title">Search Items</string>
+    <string name="notifications">Notifications</string>
+    <string name="location_heading">Location</string>
+    <string name="sort_by_name">NAME</string>
+    <string name="sort_by_type">TYPE</string>
+    <string name="sort_by_id">WHEN ADDED</string>
+    <string name="sort_by_expiry">EXPIRY DATE</string>
+    <string name="sort_by_location">LOCATION</string>
+    <string name="obj_detect_title">Detected Foods</string>
+    <string name="obj_detect_title_error">Uh-oh! There\'s been an error.</string>
+    <string name="barcode_title_error">Sorry, product not found.</string>
+
+    <!-- Headings on Toolbars -->
+    <string name="kitchen_list_heading">My Kitchen</string>
+    <string name="shopping_list_heading">Shopping List</string>
+    <string name="settings_heading">Settings</string>
+
+    <!-- Button Labels -->
+    <string name="no_exp_date_label">SET DATE</string>
+    <string name="no_notif_time_label">SET TIME</string>
+    <string name="button_save">SAVE ITEM</string>
+    <string name="button_edit">EDIT</string>
+    <string name="button_add_to_shopping">ADD TO SHOPPING LIST</string>
+    <string name="button_add_to_kitchen">ADD TO KITCHEN</string>
+    <string name="button_delete">DELETE</string>
+    <string name="undo">UNDO DELETE</string>
+    <string name="button_add_all_to_shopping">ADD ALL TO SHOPPING LIST</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="button_move_to_shopping">MOVE TO SHOPPING LIST</string>
+    <string name="button_barcode_mode">Barcode Scan</string>
+    <string name="button_obj_detect_mode">Food Detection</string>
+    <string name="button_manual_mode">Manual Input</string>
+
+    <!-- Hints -->
+    <string name="expiry_date">Expiry Date:</string>
+    <string name="expiry_filter">Expires from now until…</string>
+    <string name="hint_expiry">Expiry Date</string>
+    <string name="notification_time">Expiration check time:</string>
+    <string name="details_heading">Item Details</string>
+    <string name="order_title">ASCENDING/DESCENDING</string>
+    <string name="button_apply">APPLY</string>
+    <string name="expiry_gt_30">forever</string>
+    <string name="expiry_0">today</string>
+    <string name="error_empty">Cannot be empty!</string>
+    <string name="error_too_big">Too large a number!</string>
+    <string name="unit_in">Unit</string>
+    <string name="type_in">Type</string>
+    <string name="name_in">Item Name…</string>
+    <string name="quantity_in">Amount…</string>
+    <string name="empty_shopping">Your shopping list is empty!</string>
+    <string name="empty_kitchen">Your kitchen is empty!</string>
+    <string name="detection_not_correct">Not correct?</string>
+    <string name="obj_detect_hint">Point at food to scan</string>
+    <string name="barcode_scan_hint">Point at a barcode to scan</string>
+
+    <!-- Toast Alerts -->
+    <string name="missing_info_add">Missing Information!</string>
+    <string name="item_deleted">Item Deleted.</string>
+    <string name="item_added">Item successfully added!</string>
+    <string name="filtered">Filtered.</string>
+    <string name="sorted">Sorted by </string>
+
+    <!-- Settings -->
+    <string name="one_day_warn">1-day expiry warning</string>
+    <string name="two_day_warn">2-day expiry warning</string>
+    <string name="one_week_warn">1-week expiry warning</string>
+    <string name="units">Units</string>
+    <string name="metric">Metric</string>
+    <string name="imperial">Imperial/U.S.</string>
+
+    <!-- Content Descriptions -->
+    <string name="shopping_item_icon">Shopping Item Icon</string>
+    <string name="kitchen_item_icon">Kitchen Item Icon</string>
+    <string name="detected_item_icon">Detected Item Icon</string>
+    <string name="empty_shopping_list_icon">Empty Shopping List Icon</string>
+    <string name="empty_kitchen_list_icon">Empty Kitchen Icon</string>
+    <string name="add_to_shopping_list">Add to Shopping List</string>
+    <string name="add_to_kitchen_list">Add to Kitchen List</string>
+    <string name="add_to_kitchen_list_manual">Add to Kitchen List Manually</string>
+    <string name="add_to_kitchen_list_barcode">Add to Kitchen List By Barcode</string>
+    <string name="add_to_kitchen_list_obj_detect">Add to Kitchen List Food Detect</string>
+    <string name="help_icon">Help Icon</string>
+    <string name="take_image_button">Take Image Button</string>
+    <string name="item_increase_quantity">Increase item quantity</string>
+    <string name="item_decrease_quantity">Reduce item quantity</string>
+
+    <!-- Disclaimer/Licensing Info -->
+    <string name="info">App by: Sean Womack, 2021\n\nIcons sourced from icons8.com under free licence.
+        \n\nBarcode information provided by users at openfoodfacts.org. Accuracy of information provided cannot and should not be guaranteed. Visit openfoodfacts.org/terms-of-use for more information.
+        \n\nFruit/Vegetable detection provided by Clarifai under a free license (1000 calls/month). Accuracy of information provided cannot and should not be guaranteed. Visit https://www.clarifai.com/models/ai-food-recognition for more information.
+        \n\n\n\n\n\n\n\n
+    </string>
+    <string name="notification_disclaimer">Note: Notifications may not fire on some devices when app is forced-closed. Apologies for the inconvenience.</string>
+
+    <!-- Misc -->
+    <string name="add_item">Add item</string>
+    <string name="empty_not_saved">Item not saved.</string>
+    <string name="add_item_heading">Add Item</string>
+    <string name="loc_fridge">Fridge</string>
+    <string name="loc_freezer">Freezer</string>
+    <string name="loc_pantry">Pantry</string>
+    <string name="loc_other">Other</string>
+
+</resources>
