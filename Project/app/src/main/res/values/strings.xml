@@ -43,14 +43,16 @@
     <string name="search_title">Search Items</string>
     <string name="notifications">Notifications</string>
     <string name="location_heading">Location</string>
+    <string name="obj_detect_title">Detected Foods</string>
+    <string name="obj_detect_title_error">Uh-oh! There\'s been an error.</string>
+    <string name="barcode_title_error">Sorry, product not found.</string>
+
+    <!-- Sorting -->
     <string name="sort_by_name">NAME</string>
     <string name="sort_by_type">TYPE</string>
     <string name="sort_by_id">WHEN ADDED</string>
     <string name="sort_by_expiry">EXPIRY DATE</string>
     <string name="sort_by_location">LOCATION</string>
-    <string name="obj_detect_title">Detected Foods</string>
-    <string name="obj_detect_title_error">Uh-oh! There\'s been an error.</string>
-    <string name="barcode_title_error">Sorry, product not found.</string>
 
     <!-- Headings on Toolbars -->
     <string name="kitchen_list_heading">My Kitchen</string>

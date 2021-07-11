@@ -30,6 +30,8 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
     ShoppingItemViewModel viewModel;
     List<ShoppingItem> shoppingItems = new ArrayList<>();
     List<ShoppingItem> itemsCopy = new ArrayList<>();
+    List<ShoppingItem> checkedList = new ArrayList<>();
+
 
     ShoppingItem itemBackup;
 
@@ -227,6 +229,17 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
         sortMode = byAttribute;
         sortAsc = asc;
 
+        // get checked items to separate list
+        checkedList.clear();
+
+        for (int i = 0; i < shoppingItems.size(); i++) {
+            ShoppingItem itemTemp = shoppingItems.get(i);
+
+            if (itemTemp.isChecked()) {
+                checkedList.add(itemTemp);
+            }
+        }
+
         shoppingItems.sort((o1, o2) -> {
             switch (byAttribute) {
                 case "id":
@@ -255,6 +268,47 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
         if (asc) {
             Collections.reverse(shoppingItems);
         }
+
+        // sort checked items separately
+        checkedList.sort((o1, o2) -> {
+            switch (byAttribute) {
+                case "id":
+                    if (o1.getId() > o2.getId()) {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
+                case "name":
+                    return o1.getName().toLowerCase().compareTo(o2.getName().toLowerCase());
+                case "type":
+                    if (o1.getType() == null && o2.getType() != null) {
+                        return "".compareTo(o2.getType());
+                    } else if (o1.getType() != null && o2.getType() == null) {
+                        return o1.getType().compareTo("");
+                    } else if (o1.getType() == null && o2.getType() == null) {
+                        return 0;
+                    } else {
+                        return o1.getType().compareTo(o2.getType());
+                    }
+
+                default:
+                    return 0;
+            }
+        });
+        if (asc) {
+            Collections.reverse(checkedList);
+        }
+
+        // remove any checked items from main list
+        for (int i = 0; i < itemsCopy.size(); i++) {
+            ShoppingItem itemTemp = itemsCopy.get(i);
+            if (itemTemp.isChecked()) {
+                shoppingItems.remove(itemTemp);
+            }
+        }
+
+        // put checked items onto end of main list
+        shoppingItems.addAll(checkedList);
 
         notifyDataSetChanged();
     }
